@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int i,j;
+    char str[] = {'A','B','C','D','E'};
+    for(i=1;i<=5;i++){
+        printf("\n");
+        int n =i;
+        for(j=0;j<i;j++){
+        printf("%c",str[j]);
+        
+}
+
+    }
+    return 0;
+}
