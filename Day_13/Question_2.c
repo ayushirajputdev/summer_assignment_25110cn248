@@ -29,7 +29,7 @@ int main(){
         printf("%d,",array3[i]);
 
     }
-    printf("]");
+    printf("]\n");
     printf("THE AVERAGE OF BOTH ARRAY IS\n [");
     for(i=0;i<n1;i++){
         printf("%f,",array4[i]);

@@ -3,7 +3,7 @@ int main(){
      int n,i,array[100],array2[100],array3[100];
     printf("ENTER THE NUMBER OF TERMS TO ENTER IN THE ARRAY");
     scanf("%d",&n);
-    printf("ENTER THE NUMBER OF TERMS OF THE ARRAY");
+    printf("ENTER THE TERMS OF THE ARRAY");
     for(i=0;i<n;i++){
         scanf("%d",&array[i]);
 
