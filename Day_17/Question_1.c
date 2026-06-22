@@ -1,5 +1,6 @@
 #include <stdio.h>
 int main(){
+    // to find missing nunmbers in array
     int array2[100],i;
      int size1;
     printf("Enter the number of elements in the array: ");
