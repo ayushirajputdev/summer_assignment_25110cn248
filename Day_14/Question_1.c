@@ -3,6 +3,12 @@ int main(){
     int array[100],i,term,n,num=0,j=0,pos[100];
     printf("ENTER THE NUMBER OF TERMS TO ENTER THE ARRAY");
     scanf("%d",&n);
+    
+    if(n<=0){
+        printf("INVALID NUMBER OF TERMS ENTERED");
+        return  0;
+    }
+    else{
     for(i=0;i<n;i++){
         scanf("%d",&array[i]);
     
@@ -27,6 +33,6 @@ int main(){
     else{
         printf("THE TERM IS NOT FOUND IN THE ARRAY");
 
-    }
+    }}
     return 0;
 }

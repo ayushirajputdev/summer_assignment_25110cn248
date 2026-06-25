@@ -1,19 +1,12 @@
 #include <stdio.h>
-
-int main() {
-   char str[1000];
-    int length = 0;
-
-   
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-    
-
-    
-    while (str[length] != '\0') {
-        length++;
+int  main(){
+    char string[100];
+    int len=0;
+    printf("ENTE THE STRING");
+    fgets(string,sizeof(string),stdin);
+    while(string[len]!=0){
+        len++;
     }
-
-    printf("Length of the string is: %d\n", length);
+    printf("THE LENGTH OF THE ENTERED STRING IS %d",len);
     return 0;
 }
