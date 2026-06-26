@@ -20,7 +20,7 @@ int main() {
     }
     
     
-    sentence[j] = '\0';
+    sentence[j] = '\0';// assign null character
 
     printf("String after removing spaces: %s\n", sentence);
 

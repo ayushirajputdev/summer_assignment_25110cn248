@@ -1,37 +1,33 @@
 #include <stdio.h>
-#include <string.h>
-
-#define MAX_SIZE 100
-#define ASCII_SIZE 256
 
 int main() {
-    char str[MAX_SIZE];
-    int freq[ASCII_SIZE] = {0}; 
+    char str[1000];
+    int freq[256] = {0}; //initial frequency of all ascii character is 0
     int i;
     int found = 0;
 
-    printf("Enter a string: ");
+    printf("Enter a string or sentence: ");
     fgets(str, sizeof(str), stdin);
 
    
-    str[strcspn(str, "\n")] = '\0';
-
-   
     for (i = 0; str[i] != '\0'; i++) {
-        freq[(unsigned char)str[i]]++;
+        if (str[i] != '\n') {
+            freq[(unsigned char)str[i]]++;//takes the frequency of characters rather than the whole new line 
+        }
+    }
+
+  
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] != '\n' && freq[(unsigned char)str[i]] == 1) {
+            printf("The first non-repeating character is: '%c'\n", str[i]);
+            found = 1;
+            break;//to exit the loop after finding the first non repeating character
+        }
     }
 
     
-    for (i = 0; str[i] != '\0'; i++) {
-        if (freq[(unsigned char)str[i]] == 1) {
-            printf("The first non-repeating character is: '%c'\n", str[i]);
-            found = 1;
-            break; }
-    }
-
-   
-    if (!found) {
-        printf("All characters are repeating or the string is empty.\n");
+    if (found==0) {
+        printf("All characters repeat or no valid characters entered.\n");
     }
 
     return 0;

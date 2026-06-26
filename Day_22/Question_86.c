@@ -8,7 +8,7 @@ int main() {
 
     printf("Enter a sentence: ");
     
-    scanf("%[^\n]s", sentence);
+    scanf("%[^\n]s", sentence);//to insert a sentence 
 
     
     while (sentence[i] != '\0') {
